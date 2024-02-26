@@ -3,6 +3,7 @@ import Player from "./components/Player/Player";
 import GameBoard from "./components/GameBoard/GameBoard";
 import Log from './components/Log/Log';
 import { WINNING_COMBINATIONS } from './winning-combinations';
+import GameOver from './components/GameOver/GameOver';
 
 export const initialGameBoard = [
   [null, null, null],
@@ -46,9 +47,11 @@ export default function App() {
       firstSquareSymbol === secondSquareSymbol &&
       firstSquareSymbol === thirdSquareSymbol
     ) {
-        winner = firstSquareSymbol;
-      }
-  };
+      winner = firstSquareSymbol;
+    }
+  }
+
+  const hasDraw = gameTurns.length === 9 && !winner;
 
   function handleSelectSquare(rowIndex, colIndex) {
     // Update the GameTurn in immutable way
@@ -79,7 +82,7 @@ export default function App() {
             isActive={activePlayer === "O"}
           />
         </ol>
-        {winner && <p>You won, {winner}!</p>}
+        {(winner || hasDraw) && <GameOver winner={winner} />}
         <GameBoard 
           onSelectSquare={(rowIndex, colIndex) => handleSelectSquare(rowIndex, colIndex)}
           board={gameBoard}
