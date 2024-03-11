@@ -15,6 +15,14 @@
 
 1. I built this project with the instructor.
 
+## Starting project
+
+- The project based on the starting project from the course.
+- It contents:
+    - basic Vite project
+    - CSS codes
+    - `bg-pattern-dark.png`, `bg-pattern.png` and `gameLogo.png`
+
 ## Run locally
 
 You need have Node v20.11.0 or higher.
