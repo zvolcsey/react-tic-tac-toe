@@ -7,8 +7,13 @@
 
 ## Content
 
-1. [Run locally](#run-locally)
-2. [Port](#port)
+1. [Change log](#change-log)
+2. [Run locally](#run-locally)
+3. [Port](#port)
+
+## Change Log
+
+1. I built this project with the instructor.
 
 ## Run locally
 
